@@ -20,7 +20,9 @@
     <label>
         <input type="number" name="price">
     </label>
-    <input type="submit" value="제출">
 </form>
+</body>
+<body>
+<input type="submit" value="제출">
 </body>
 </html>
