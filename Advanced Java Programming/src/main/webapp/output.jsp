@@ -7,6 +7,6 @@
 <body>
 <h1>Add Book into BookList</h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="output.jsp">Hello Servlet</a>
 </body>
 </html>

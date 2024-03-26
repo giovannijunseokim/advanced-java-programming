@@ -1,4 +1,4 @@
-package com.example.ssu.advancedjavaprogramming;
+package org.example.ssu.advancedjavaprogramming;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ public class BookInfo {
 
     BookInfo(int number, String name, String publisher, int price) {
         if(number < 1) throw new IllegalArgumentException("The number must be greater than or equal to 1.");
-        if(name.isBlank()) throw new IllegalArgumentException("The name cannot be blank.");
-        if(publisher.isBlank()) throw new IllegalArgumentException("The publisher cannot be blank.");
+        if(name.isEmpty()) throw new IllegalArgumentException("The name cannot be blank.");
+        if(publisher.isEmpty()) throw new IllegalArgumentException("The publisher cannot be blank.");
         if(price < 0) throw new IllegalArgumentException("The number must be greater than or equal to 0.");
 
         this.number = number;
@@ -35,7 +35,7 @@ public class BookInfo {
     }
 
     public void setName(String name) {
-        if(name.isBlank()) throw new IllegalArgumentException("The name cannot be blank.");
+        if(name.isEmpty()) throw new IllegalArgumentException("The name cannot be blank.");
         this.name = name;
     }
 
@@ -44,7 +44,7 @@ public class BookInfo {
     }
 
     public void setPublisher(String publisher) {
-        if(publisher.isBlank()) throw new IllegalArgumentException("The publisher cannot be blank.");
+        if(publisher.isEmpty()) throw new IllegalArgumentException("The publisher cannot be blank.");
         this.publisher = publisher;
     }
 
@@ -57,7 +57,7 @@ public class BookInfo {
         this.price = price;
     }
 
-    public List<BookInfo> getInitialBookList(){
+    public static List<BookInfo> getInitialBookList(){
         ArrayList<BookInfo> bookList = new ArrayList<>();
         bookList.add(new BookInfo(1, "축구의 역사", "굿스포츠", 7000));
         bookList.add(new BookInfo(2, "축구 아는 여자", "나무수", 13000));
