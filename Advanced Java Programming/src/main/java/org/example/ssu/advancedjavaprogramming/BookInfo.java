@@ -9,7 +9,7 @@ public class BookInfo {
     String publisher;
     int price;
 
-    BookInfo(int number, String name, String publisher, int price) {
+    public BookInfo(int number, String name, String publisher, int price) {
         if(number < 1) throw new IllegalArgumentException("The number must be greater than or equal to 1.");
         if(name.isEmpty()) throw new IllegalArgumentException("The name cannot be blank.");
         if(publisher.isEmpty()) throw new IllegalArgumentException("The publisher cannot be blank.");
