@@ -8,7 +8,7 @@
 <body>
 <h1>신규 도서 등록</h1>
 <hr>
-<form name="f1" method="post" action="/output">
+<form name="f1" method="post" action="/output.jsp">
     <label>
         <input type="number" name="number">
     </label>
