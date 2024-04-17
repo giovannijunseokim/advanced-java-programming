@@ -16,6 +16,22 @@
     <title>Document</title>
 </head>
 <body>
-테스트
+<h1>Customer 정보 입력</h1>
+<h1>Customer Input Form</h1>
+<form action="${pageContext.request.contextPath}/customer-output" method="post">
+    <label for="custId">Customer ID:</label>
+    <input type="number" id="custId" name="custId"><br>
+
+    <label for="name">Customer Name:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone"><br>
+
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>

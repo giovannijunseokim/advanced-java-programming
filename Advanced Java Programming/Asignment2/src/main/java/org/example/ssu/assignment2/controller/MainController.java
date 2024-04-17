@@ -2,7 +2,9 @@ package org.example.ssu.assignment2.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.ssu.assignment2.model.Book;
+import org.example.ssu.assignment2.model.Customer;
 import org.example.ssu.assignment2.repository.BookRepository;
+import org.example.ssu.assignment2.repository.CustomerRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
     private final BookRepository bookRepository;
+    private final CustomerRepository customerRepository;
 
     @GetMapping("/")
     public String root() {
@@ -21,6 +24,12 @@ public class MainController {
     @GetMapping("/customer-input")
     public String customerInput() {
         return "input/customer-input";
+    }
+
+    @PostMapping("/customer-output")
+    public String customerOutput(@ModelAttribute Customer customer) {
+        customerRepository.save(customer);
+        return "output/customer-output";
     }
 
     @GetMapping("/book-input")

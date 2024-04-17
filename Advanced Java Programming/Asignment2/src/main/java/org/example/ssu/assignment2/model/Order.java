@@ -12,5 +12,5 @@ public class Order {
     private int customerId;
     private int bookId;
     private int salePrice;
-    private Date orderdate;
+    private Date orderDate;
 }
