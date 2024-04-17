@@ -16,6 +16,25 @@
     <title>Document</title>
 </head>
 <body>
-테스트
+<h1>Book 정보 입력</h1>
+<h1>Book Input Form</h1>
+<form action="${pageContext.request.contextPath}/order-output" method="post">
+    <label for="orderId">Order ID:</label>
+    <input type="number" id="orderId" name="orderId"><br>
+
+    <label for="custId">Customer ID:</label>
+    <input type="number" id="custId" name="custId"><br>
+
+    <label for="bookId">Book ID:</label>
+    <input type="number" id="bookId" name="bookId"><br>
+
+    <label for="salePrice">Sale Price:</label>
+    <input type="number" id="salePrice" name="salePrice"><br>
+
+    <label for="orderDate">Order Date:</label>
+    <input type="date" id="orderDate" name="orderDate"><br>
+
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
