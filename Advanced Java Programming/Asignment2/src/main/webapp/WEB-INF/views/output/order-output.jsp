@@ -44,6 +44,9 @@
         </td>
     </tr>
     <%}%></table>
+<ul>
+    <li><a href="${pageContext.request.contextPath}/">대문 페이지로 이동</a></li>
+</ul>
 <%
         conn.close();
     } catch (Exception e) {
