@@ -35,6 +35,10 @@ dependencies {
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // R2DBC
+    implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+    implementation "com.github.jasync-sql:jasync-r2dbc-mysql:2.0.8"
 }
 
 tasks.named('test') {

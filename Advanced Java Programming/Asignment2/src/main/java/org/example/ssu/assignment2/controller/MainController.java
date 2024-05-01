@@ -47,7 +47,11 @@ public class MainController {
     // 도서 정보 페이지를 보여주는 역할
     @PostMapping("/book-output")
     public String bookOutput(@ModelAttribute Book book) {
-        bookRepository.save(book);
+        bookRepository.save(book).map(savedBook -> {
+            savedBook.setBookName(savedBook.getBookName().toUpperCase());
+            savedBook.setPublisher(savedBook.getPublisher().toUpperCase());
+            return savedBook;
+        }).subscribe();
         return "output/book-output";
     }
 

@@ -1,7 +1,9 @@
 package org.example.ssu.assignment2.repository;
 
 import org.example.ssu.assignment2.model.Book;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface BookRepository extends JpaRepository<Book, Integer> {
+@Repository
+public interface BookRepository extends ReactiveCrudRepository<Book, Integer> {
 }
